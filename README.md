@@ -1,7 +1,7 @@
 # highlighter_userscript
 simple chrome userscript to add text highlighting functionality.
 
-- `alt + h` to enable/disable highlighter
+- `alt + h` *or* `ctrl + shift + h`  to turn on/off highlighter
 - press keys to change color:
   ```
             'r': Soft Coral
