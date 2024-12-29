@@ -56,7 +56,8 @@
     }
 
     document.addEventListener('keydown', (event) => {
-        if (event.altKey && (event.key=='h' || event.key=='H')){
+        if ((event.altKey || (event.ctrlKey && event.shiftKey)) && (event.key=='h' || event.key=='H')){
+            event.preventDefault();
             if (!highlighter_script_status){
                 colorForKey();
                 document.addEventListener('mousedown', applyHighlight);
