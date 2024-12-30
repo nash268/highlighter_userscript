@@ -49,6 +49,11 @@
             span.style.color = "black";
             span.style.backgroundColor = highlight_color;
             span.appendChild(selectedText);
+            span.querySelectorAll('*').forEach(e => {
+                e.style.color = 'inherit';
+                e.style.backgroundColor = 'inherit';
+                e.style.display = 'inline';
+            });
 
             range.insertNode(span);
             selection.removeAllRanges();
