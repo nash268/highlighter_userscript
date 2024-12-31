@@ -53,19 +53,23 @@
             range.insertNode(span);
             selection.removeAllRanges();
         }
+
     }
 
     document.addEventListener('keydown', (event) => {
         if ((event.altKey || (event.ctrlKey && event.shiftKey)) && (event.key=='h' || event.key=='H')){
             event.preventDefault();
+            event.stopPropagation();
             if (!highlighter_script_status){
                 colorForKey();
-                document.addEventListener('mousedown', applyHighlight);
-                document.addEventListener('touchdown', applyHighlight);
+                document.addEventListener('mouseup', applyHighlight);
+                document.addEventListener('touchup', applyHighlight);
+                document.addEventListener('pointerup', applyHighlight);
                 highlighter_script_status = true;
             } else {
-                document.removeEventListener('mousedown', applyHighlight);
-                document.removeEventListener('touchdown', applyHighlight);
+                document.removeEventListener('mouseup', applyHighlight);
+                document.removeEventListener('touchup', applyHighlight);
+                document.addEventListener('pointerup', applyHighlight);
                 highlighter_script_status = false;
             }
         }
