@@ -65,7 +65,7 @@
                 document.addEventListener('pointerup', applyHighlight);
                 highlighter_script_status = true;
             } else {
-                document.addEventListener('pointerup', applyHighlight);
+                document.removeEventListener('pointerup', applyHighlight);
                 highlighter_script_status = false;
             }
         }
