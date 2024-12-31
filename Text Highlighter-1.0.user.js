@@ -62,13 +62,9 @@
             event.stopPropagation();
             if (!highlighter_script_status){
                 colorForKey();
-                document.addEventListener('mouseup', applyHighlight);
-                document.addEventListener('touchup', applyHighlight);
                 document.addEventListener('pointerup', applyHighlight);
                 highlighter_script_status = true;
             } else {
-                document.removeEventListener('mouseup', applyHighlight);
-                document.removeEventListener('touchup', applyHighlight);
                 document.addEventListener('pointerup', applyHighlight);
                 highlighter_script_status = false;
             }
