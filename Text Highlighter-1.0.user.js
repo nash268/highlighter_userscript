@@ -40,7 +40,7 @@
 
     function highlighterColorTray() {
 
-        if (document.body.querySelector('#color-tray') || document.head.querySelector('#color-tray-styles')) {
+        if (document.body.querySelector('#color-tray') && document.head.querySelector('#color-tray-styles')) {
             document.body.querySelector('#color-tray').remove();
             document.head.querySelector('#color-tray-styles').remove();
             return;
