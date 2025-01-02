@@ -86,7 +86,7 @@
             colorItem.className = 'color-item';
             colorItem.style.backgroundColor = color;
             colorItem.setAttribute('highlight_color', color);
-            colorItem.title = `Color: ${key}`;
+            colorItem.title = key;
             colorTray.appendChild(colorItem);
 
             colorItem.addEventListener('click', () => {
